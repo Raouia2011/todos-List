@@ -1,11 +1,14 @@
-import { View, TextInput, Button, StyleSheet } from "react-native";
+import { View, TextInput, Text, StyleSheet } from "react-native";
 import { useState } from "react";
 
 const NewItem = ({ onAddItem }) => {
   const [newItemText, setItemText] = useState("");
+  const [input,setInput]=useState()
 
   const trackText = (text) => {
     setItemText(text);
+   
+
   };
 
   return (
@@ -19,12 +22,12 @@ const NewItem = ({ onAddItem }) => {
         />
       </View>
       <View style={styles.itemContainer}>
-        <Button
+        <Text style={styles.appButtonContainer}
           title="Add Item"
           onPress={() => {
             onAddItem(newItemText);
           }}
-        />
+        >Add Item</Text>
       </View>
     </View>
   );
@@ -37,7 +40,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingHorizontal: 10,
     paddingVertical: 15,
-    backgroundColor: "#270af1",
+    backgroundColor: "#469597",
     borderRadius: 20,
   },
   itemContainer: {
@@ -48,4 +51,20 @@ const styles = StyleSheet.create({
     color: "white",
     
   },
+  appButtonContainer: {
+    elevation: 8,
+    backgroundColor: "#009688",
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    color: "white",
+    textAlign:"center"
+  },
+  appButtonText: {
+    fontSize: 18,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textTransform: "uppercase"
+  }
 });

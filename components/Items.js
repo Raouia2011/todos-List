@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, FlatList, Alert } from "react-native";
 import Item from "./Item";
 import { useState, useEffect } from "react";
-import NewItem from "./NewItem";
+import NewItem from "./Newitem";
 import AllDone from "./AllDone";
 
 const Items = () => {
@@ -76,7 +76,7 @@ const Items = () => {
         <FlatList
           data={items}
           renderItem={({ item, index }) => (
-            <Item
+            <Item 
               desc={item.desc}
               done={item.done}
               index={index}

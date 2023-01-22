@@ -20,17 +20,17 @@ const styles = StyleSheet.create({
   width: {
     width: "50%",
     alignItems: "center",
-    backgroundColor: "gray",
+    backgroundColor: "#E5E3E4",
     height: 70,
     justifyContent: "center",
     borderRadius: 100,
     borderWidth: 2,
-    borderColor: "#270af1",
+    borderColor: "#5BA199",
   },
   text: {
-    color: "white",
+    color: "#5BA199",
     textAlign: "center",
     fontSize: 24,
-    fontFamily: "caveat",
+    
   },
 });
